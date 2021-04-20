@@ -1,9 +1,9 @@
 
 // let clases = require('./clases');  // importar clases 
-// let tareas = require('./tareas');  // importar funciones tratamiento de tareas 
+let tareas = require('./tareas');  // importar funciones tratamiento de tareas 
 
 let io = require('./io');      // importar función entrada de datos por pantalla
-
+const {Tareas, CrudTareas, tarea} = require('./tareas.js'); 
 let opcion;
 
 do {
@@ -18,12 +18,15 @@ do {
             break;
         case 3:
             borraTarea();
+            tareas.eliminar();
             break;
         case 4:
             listaTareas();
+            tareas.listarTareas();
             break;
         case 5:
             listarTarea();
+            tareas.listarById
             break;
         case 6:
             break;
