@@ -17,8 +17,9 @@ do {
             actualizaTarea();
             break;
         case 3:
-            borraTarea();
-            tareas.eliminar();
+            //borraTarea();
+            id = io.entrada('tarea');
+            CrudTareas.eliminar(id);
             break;
         case 4:
             CrudTareas.listarTareas();
