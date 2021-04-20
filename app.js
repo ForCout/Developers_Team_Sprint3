@@ -21,12 +21,11 @@ do {
             tareas.eliminar();
             break;
         case 4:
-            listaTareas();
-            tareas.listarTareas();
+            CrudTareas.listarTareas();
             break;
         case 5:
-            listarTarea();
-            tareas.listarById
+            id = io.entrada('tarea');
+            CrudTareas.listarById(id);
             break;
         case 6:
             break;

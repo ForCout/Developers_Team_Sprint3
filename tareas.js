@@ -2,7 +2,6 @@ const fs = require("fs");
 let tareas = fs.readFileSync("tareas.json");
 let listaTareas = JSON.parse(tareas);
 
-
 class Tareas {
   constructor(tarea, estado, finTarea, usuario) {
     this.tarea = tarea;
@@ -43,14 +42,12 @@ const CrudTareas = (function () {
         }
       }
     },
-
-
-    
   };
 })();
 
-const listar =  (i) => {
+const listar = (i) => {
   console.log(
+    "\n____________________________________\n\n",
     "idTarea: ",
     listaTareas[i].idTarea,
     "\nTarea: ",
@@ -62,9 +59,8 @@ const listar =  (i) => {
     "\nHora finalizacion: ",
     listaTareas[i].Hora_finalizacion,
     "\nUsuario: ",
-    listaTareas[i].Usuario,
-    "\n-----------------------------\n"
+    listaTareas[i].Usuario
   );
-}
+};
 
-module.exports = { Tareas, tarea, CrudTareas};
+module.exports = { Tareas, tarea, CrudTareas };

@@ -4,16 +4,17 @@ function entrada(dato) {
     const readline = require('readline-sync');
     switch (dato) {
         case 'opcion':
-            return parseInt(readline.question(`Introduzca opcion: `));
+            return parseInt(readline.question(`\nIntroduzca opcion: `));
         case 'tarea':
-            return readline.question(`Nombre de la tarea: `);
+            //return readline.question(`Nombre de la tarea: `);
+            return parseInt(readline.question(`\nIntroduzca id_tarea: `));
 
     }
 }
 
 function menu() {
 
-    console.log('____________________________________________________');
+    console.log('____________________________________\n');
     console.log('     1. Crea tarea');
     console.log('     2. Actualiza tarea');
     console.log('     3. Borra tarea');
