@@ -23,51 +23,23 @@ const tarea = new FactoriaTareas();
 const CrudTareas = (function () {
   return {
     listarTareas: () => {
-      //for (let i in listaTareas) listar(i);
-      listaTareas.forEach(function (listar) {
-        console.log(listar)
-      })
+      listaTareas.forEach(function (tarea) {
+        console.log(tarea);
+      });
     },
 
     listarById: (id) => {
-      // for (let i in listaTareas) {
-      //   if (listaTareas[i].idTarea == id) listar(i);
-      // }
-      listaTareas.forEach(function (listar) {
-        if(listar.idTarea == id)
-        console.log(listar)
-      })
+      listaTareas.forEach(function (tarea) {
+        if (tarea.idTarea == id) console.log(tarea);
+      });
     },
     eliminar: (id) => {
-      for (let i in listaTareas) {
-        if (listaTareas[i].idTarea == id) {
-          listaTareas.splice(i, 1);
-          console.log(
-            `La tarea con id: ${id} ha sido eliminada`
-          );
-          break;
-        }
-      }
+      listaTareas.forEach(function (tarea) {
+        if (tarea.idTarea == id) listaTareas.splice(tarea, 1);
+      });
+      console.log(`La tarea con id: ${id} ha sido eliminada`);
     },
   };
 })();
-
-const listar = (i) => {
-  //console.log(
-    "\n____________________________________\n\n",
-    "idTarea: ",
-    listaTareas[i].idTarea,
-    "\nTarea: ",
-    listaTareas[i].Tarea,
-    "\nEstado: ",
-    listaTareas[i].Estado,
-    "\nHora Inicio: ",
-    listaTareas[i].Hora_inicio,
-    "\nHora finalizacion: ",
-    listaTareas[i].Hora_finalizacion,
-    "\nUsuario: ",
-    listaTareas[i].Usuario
-  //);
-};
 
 module.exports = { Tareas, tarea, CrudTareas };
